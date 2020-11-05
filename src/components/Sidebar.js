@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Scrollspy from 'react-scrollspy';
 import Scroll from './Scroll';
 
-import avatar from '../assets/images/cto-ai.png';
+import avatar from '../assets/images/muhammad-ilham-hidayat.jpg';
 import config from '../../config';
 
 export class Sidebar extends Component {
@@ -14,8 +14,8 @@ export class Sidebar extends Component {
         { content: 'Experience', href: 'experience' },
         { content: 'Education', href: 'education' },
         { content: 'Skills', href: 'skills' },
-        { content: 'Portfolio', href: 'portfolio' },
-        { content: 'Certifications', href: 'certifications' },
+        // { content: 'Portfolio', href: 'portfolio' },
+        // { content: 'Certifications', href: 'certifications' },
       ],
     };
   }
@@ -71,15 +71,6 @@ export class Sidebar extends Component {
             })}
           </Scrollspy>
         </div>
-        <small className="d-none d-lg-block text-white">
-          Generated with the{' '}
-          <a
-            href={`${config.footerUrl}`}
-            className="text-light sidebar-footer-link"
-          >
-            Ops Platform
-          </a>
-        </small>
       </nav>
     );
   }

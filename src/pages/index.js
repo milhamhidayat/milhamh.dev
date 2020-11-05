@@ -19,16 +19,19 @@ const IndexPage = () => (
             <span className="text-primary"> {config.lastName}</span>
           </h1>
           <div className="subheading mb-5">
-            <a href={`mailto:${config.email}`}>{config.email} · </a>
-            {config.address} · {config.phone}
+            {config.address}
           </div>
           <p className="lead mb-5">{config.bio}</p>
+          <ul className="blog">
+            <li><a href="https://www.blog.milhamh.dev">English</a></li>
+            <li><a href="https://www.omah.milhamh.dev">Bahasa Indonesia</a></li>
+          </ul>
           <div className="social-icons">
             {config.socialLinks.map((social) => {
               const { icon, url } = social;
               return (
                 <a key={url} href={url}>
-                  <i className={`fab ${icon}`}></i>
+                  <i className={`${icon}`}></i>
                 </a>
               );
             })}
@@ -104,20 +107,76 @@ const IndexPage = () => (
           <h2 className="mb-5">Skills</h2>
 
           <div className="subheading mb-3">
-            Programming Languages &amp; Tools
+            Programming Languages
           </div>
           <ul className="list-inline dev-icons">
-            {config.langTools.map((education) => {
-              const { iconClass } = education;
+            {config.programmingLang.map((lang) => {
+              const { url, alt } = lang;
               return (
                 <li className="list-inline-item">
-                  <i className={`fab ${iconClass}`}></i>
+                  <img src={url} alt={alt} />&nbsp;
                 </li>
               );
             })}
           </ul>
 
-          <div className="subheading mb-3">Other skills</div>
+          <div className="subheading mb-3">
+            Cloud Computing
+          </div>
+          <ul className="list-inline dev-icons">
+            {config.cloudComputing.map((cc) => {
+              const { url, alt } = cc;
+              return (
+                <li className="list-inline-item">
+                  <img src={url} alt={alt} />&nbsp;
+                </li>
+              );
+            })}
+          </ul>
+
+          <div className="subheading mb-3">
+            Containerization
+          </div>
+          <ul className="list-inline dev-icons">
+            {config.containerization.map((container) => {
+              const { url, alt } = container;
+              return (
+                <li className="list-inline-item">
+                  <img src={url} alt={alt} />&nbsp;
+                </li>
+              );
+            })}
+          </ul>
+
+          <div className="subheading mb-3">
+            Databases
+          </div>
+          <ul className="list-inline dev-icons">
+            {config.databases.map((db) => {
+              const { url, alt } = db;
+              return (
+                <li className="list-inline-item">
+                  <img src={url} alt={alt} />&nbsp;
+                </li>
+              );
+            })}
+          </ul>
+
+          <div className="subheading mb-3">
+            Other Tools
+          </div>
+          <ul className="list-inline dev-icons">
+            {config.otherTools.map((ot) => {
+              const { url, alt } = ot;
+              return (
+                <li className="list-inline-item">
+                  <img src={url} alt={alt} />&nbsp;
+                </li>
+              );
+            })}
+          </ul>
+
+          {/* <div className="subheading mb-3">Other skills</div>
           <ul className="fa-ul mb-0">
             {config.skills.map((skill) => {
               return (
@@ -127,13 +186,13 @@ const IndexPage = () => (
                 </li>
               );
             })}
-          </ul>
+          </ul> */}
         </div>
       </section>
 
       <hr className="m-0" />
 
-      <section
+      {/* <section
         className="resume-section p-3 p-lg-5 d-flex align-items-center"
         id="portfolio"
       >
@@ -187,7 +246,7 @@ const IndexPage = () => (
         </div>
       </section>
     </div>
-    <div className="container w-100">
+    <div className="container w-100"> */}
       <p className="text-center">
         <small className="d-lg-none d-xl-none">
           Generated with the{' '}
